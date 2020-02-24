@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A77488E24034D010056A3F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77488D24034D010056A3F6 /* AppDelegate.swift */; };
 		3A77489024034D010056A3F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77488F24034D010056A3F6 /* SceneDelegate.swift */; };
-		3A77489224034D010056A3F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A77489124034D010056A3F6 /* ViewController.swift */; };
 		3A77489524034D010056A3F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A77489324034D010056A3F6 /* Main.storyboard */; };
 		3A77489724034D030056A3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A77489624034D030056A3F6 /* Assets.xcassets */; };
 		3A77489A24034D030056A3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A77489824034D030056A3F6 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,11 @@
 		3A7748B524034D040056A3F6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748B424034D040056A3F6 /* ExtensionDelegate.swift */; };
 		3A7748B724034D040056A3F6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748B624034D040056A3F6 /* NotificationController.swift */; };
 		3A7748B924034D060056A3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7748B824034D060056A3F6 /* Assets.xcassets */; };
+		3A7748CA240364220056A3F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748C9240364220056A3F6 /* LoginViewController.swift */; };
+		3A7748CC240364A60056A3F6 /* StartDrinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */; };
+		52FFCFBCACF7A580E1F0E541 /* Pods_NoRegrets_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245596F1116411DCF84F45F /* Pods_NoRegrets_WatchKit_Extension.framework */; };
+		642A99FD9D6F014B1733FBE5 /* Pods_NoRegrets_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33ACBC4776C9D26E8EABA51 /* Pods_NoRegrets_WatchKit_App.framework */; };
+		AE5399931941BA8908C3E716 /* Pods_NoRegrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD9E4B6ACD88B6BEEBCA6F /* Pods_NoRegrets.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3280B8F42DC7DFCB25C50299 /* Pods-NoRegrets WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit App/Pods-NoRegrets WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		3A77488A24034D010056A3F6 /* NoRegrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoRegrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A77488D24034D010056A3F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A77488F24034D010056A3F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A77489124034D010056A3F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A77489424034D010056A3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A77489624034D030056A3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A77489924034D030056A3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,16 @@
 		3A7748B824034D060056A3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7748BA24034D060056A3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7748BB24034D060056A3F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3A7748C9240364220056A3F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDrinkingViewController.swift; sourceTree = "<group>"; };
+		7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets.release.xcconfig"; path = "Target Support Files/Pods-NoRegrets/Pods-NoRegrets.release.xcconfig"; sourceTree = "<group>"; };
+		94FC529A1668C3F6C12DCC32 /* Pods-NoRegrets WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit App/Pods-NoRegrets WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit Extension/Pods-NoRegrets WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C33ACBC4776C9D26E8EABA51 /* Pods_NoRegrets_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoRegrets_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFD9E4B6ACD88B6BEEBCA6F /* Pods_NoRegrets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoRegrets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E245596F1116411DCF84F45F /* Pods_NoRegrets_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoRegrets_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B66775F48C800B54877BD5 /* Pods-NoRegrets WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit Extension/Pods-NoRegrets WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		E3F2378FF5F541C67C40D29B /* Pods-NoRegrets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets/Pods-NoRegrets.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5399931941BA8908C3E716 /* Pods_NoRegrets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +114,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FFCFBCACF7A580E1F0E541 /* Pods_NoRegrets_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E77CC760E27D1D7A5FBDB193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642A99FD9D6F014B1733FBE5 /* Pods_NoRegrets_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16AB44E760C0AAAC9F64F126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFFD9E4B6ACD88B6BEEBCA6F /* Pods_NoRegrets.framework */,
+				C33ACBC4776C9D26E8EABA51 /* Pods_NoRegrets_WatchKit_App.framework */,
+				E245596F1116411DCF84F45F /* Pods_NoRegrets_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A77488124034D010056A3F6 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +146,8 @@
 				3A7748A224034D030056A3F6 /* NoRegrets WatchKit App */,
 				3A7748B124034D040056A3F6 /* NoRegrets WatchKit Extension */,
 				3A77488B24034D010056A3F6 /* Products */,
+				AF0988C924A87E84BE0D8E41 /* Pods */,
+				16AB44E760C0AAAC9F64F126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,11 +166,12 @@
 			children = (
 				3A77488D24034D010056A3F6 /* AppDelegate.swift */,
 				3A77488F24034D010056A3F6 /* SceneDelegate.swift */,
-				3A77489124034D010056A3F6 /* ViewController.swift */,
 				3A77489324034D010056A3F6 /* Main.storyboard */,
 				3A77489624034D030056A3F6 /* Assets.xcassets */,
 				3A77489824034D030056A3F6 /* LaunchScreen.storyboard */,
 				3A77489B24034D030056A3F6 /* Info.plist */,
+				3A7748C9240364220056A3F6 /* LoginViewController.swift */,
+				3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */,
 			);
 			path = NoRegrets;
 			sourceTree = "<group>";
@@ -162,6 +199,20 @@
 			path = "NoRegrets WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		AF0988C924A87E84BE0D8E41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3F2378FF5F541C67C40D29B /* Pods-NoRegrets.debug.xcconfig */,
+				7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */,
+				94FC529A1668C3F6C12DCC32 /* Pods-NoRegrets WatchKit App.debug.xcconfig */,
+				3280B8F42DC7DFCB25C50299 /* Pods-NoRegrets WatchKit App.release.xcconfig */,
+				A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */,
+				E2B66775F48C800B54877BD5 /* Pods-NoRegrets WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,10 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7748C624034D060056A3F6 /* Build configuration list for PBXNativeTarget "NoRegrets" */;
 			buildPhases = (
+				8B1F7612362E3539F3B57179 /* [CP] Check Pods Manifest.lock */,
 				3A77488624034D010056A3F6 /* Sources */,
 				3A77488724034D010056A3F6 /* Frameworks */,
 				3A77488824034D010056A3F6 /* Resources */,
 				3A7748C524034D060056A3F6 /* Embed Watch Content */,
+				20EB97FC78A13C72BCBF1CEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,8 +241,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7748C224034D060056A3F6 /* Build configuration list for PBXNativeTarget "NoRegrets WatchKit App" */;
 			buildPhases = (
+				E56853B9E390C0BFBBCDD8C3 /* [CP] Check Pods Manifest.lock */,
 				3A77489C24034D030056A3F6 /* Resources */,
 				3A7748C124034D060056A3F6 /* Embed App Extensions */,
+				E77CC760E27D1D7A5FBDB193 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7748BE24034D060056A3F6 /* Build configuration list for PBXNativeTarget "NoRegrets WatchKit Extension" */;
 			buildPhases = (
+				987C20DA3619DC7C33226C0D /* [CP] Check Pods Manifest.lock */,
 				3A7748A924034D040056A3F6 /* Sources */,
 				3A7748AA24034D040056A3F6 /* Frameworks */,
 				3A7748AB24034D040056A3F6 /* Resources */,
@@ -289,12 +345,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20EB97FC78A13C72BCBF1CEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoRegrets/Pods-NoRegrets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoRegrets/Pods-NoRegrets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoRegrets/Pods-NoRegrets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B1F7612362E3539F3B57179 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoRegrets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		987C20DA3619DC7C33226C0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoRegrets WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56853B9E390C0BFBBCDD8C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoRegrets WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A77488624034D010056A3F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A77489224034D010056A3F6 /* ViewController.swift in Sources */,
+				3A7748CA240364220056A3F6 /* LoginViewController.swift in Sources */,
+				3A7748CC240364A60056A3F6 /* StartDrinkingViewController.swift in Sources */,
 				3A77488E24034D010056A3F6 /* AppDelegate.swift in Sources */,
 				3A77489024034D010056A3F6 /* SceneDelegate.swift in Sources */,
 			);
@@ -469,6 +612,7 @@
 		};
 		3A7748BF24034D060056A3F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +635,7 @@
 		};
 		3A7748C024034D060056A3F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2B66775F48C800B54877BD5 /* Pods-NoRegrets WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +658,7 @@
 		};
 		3A7748C324034D060056A3F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94FC529A1668C3F6C12DCC32 /* Pods-NoRegrets WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -532,6 +678,7 @@
 		};
 		3A7748C424034D060056A3F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3280B8F42DC7DFCB25C50299 /* Pods-NoRegrets WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -551,6 +698,7 @@
 		};
 		3A7748C724034D060056A3F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F2378FF5F541C67C40D29B /* Pods-NoRegrets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,6 +717,7 @@
 		};
 		3A7748C824034D060056A3F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
