@@ -14,18 +14,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-4j-iFO">
+                                <rect key="frame" x="16" y="287" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-Sk-YMN">
+                                <rect key="frame" x="16" y="329" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Regrets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-4A-lZT">
+                                <rect key="frame" x="16" y="145" width="343" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-Fw-l1d">
+                                <rect key="frame" x="16" y="378" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvs-6R-7zv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-F3-8NU">
+                                <rect key="frame" x="317" y="378" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="onLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNC-lE-g9f"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="Zec-Sk-YMN" id="IvC-Ev-Gpc"/>
+                        <outlet property="usernameField" destination="Ocb-4j-iFO" id="yx5-IL-RJA"/>
                         <segue destination="KWa-9C-HU4" kind="presentation" identifier="loggedIn" id="Q0Q-Lt-GsW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
-        <!--Start Drinking View Controller-->
+        <!--Add Drink-->
         <scene sceneID="jo4-2z-4NV">
             <objects>
                 <viewController id="yG9-UB-8Jc" customClass="StartDrinkingViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,11 +74,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ujL-hH-wgS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ztc-WG-7Yz"/>
+                    <navigationItem key="navigationItem" title="Add Drink" id="ztc-WG-7Yz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHE-Uq-tGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="1620"/>
+            <point key="canvasLocation" x="497" y="1630"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pbx-Tn-Nz7">
@@ -47,26 +86,32 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="KWa-9C-HU4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rcL-So-saO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="fjE-Za-HYW" kind="relationship" relationship="viewControllers" id="pQ1-Yc-cix"/>
+                        <segue destination="vLe-P5-2RU" kind="relationship" relationship="viewControllers" id="Xki-G3-rnN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isq-Ua-EIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="126"/>
         </scene>
-        <!--Item-->
+        <!--Add-->
         <scene sceneID="gBz-HC-6xt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fjE-Za-HYW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LCM-br-oZg"/>
+                    <tabBarItem key="tabBarItem" title="Add" id="LCM-br-oZg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vyv-3K-S5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.61011344629376074" blue="0.53108645704895152" alpha="0.96404599471830987" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -75,7 +120,49 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSb-EA-3G2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360.80000000000001" y="890.10494752623697"/>
+            <point key="canvasLocation" x="497" y="887"/>
+        </scene>
+        <!--Previous Drinks-->
+        <scene sceneID="tix-u1-wdn">
+            <objects>
+                <viewController id="xZu-Wb-6wI" customClass="CalanderViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfh-HK-I06">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pNU-jF-z29"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Previous Drinks" id="6nE-jR-yCm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Gf-tP-tg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="1630"/>
+        </scene>
+        <!--Past-->
+        <scene sceneID="67x-eu-mdq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vLe-P5-2RU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Past" image="calendar" catalog="system" id="9Iv-M2-p56"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Av-QY-uem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.61011344629376074" blue="0.53108645704895152" alpha="0.96404599471830987" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xZu-Wb-6wI" kind="relationship" relationship="rootViewController" id="P7y-BQ-GK6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tD2-Uv-N5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="887"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
+    </resources>
 </document>

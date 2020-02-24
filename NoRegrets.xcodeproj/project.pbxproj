@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		3A7748B924034D060056A3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7748B824034D060056A3F6 /* Assets.xcassets */; };
 		3A7748CA240364220056A3F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748C9240364220056A3F6 /* LoginViewController.swift */; };
 		3A7748CC240364A60056A3F6 /* StartDrinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */; };
+		3AAA929D24036BCE00F1C4A5 /* CalanderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA929C24036BCE00F1C4A5 /* CalanderViewController.swift */; };
 		52FFCFBCACF7A580E1F0E541 /* Pods_NoRegrets_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E245596F1116411DCF84F45F /* Pods_NoRegrets_WatchKit_Extension.framework */; };
 		642A99FD9D6F014B1733FBE5 /* Pods_NoRegrets_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33ACBC4776C9D26E8EABA51 /* Pods_NoRegrets_WatchKit_App.framework */; };
 		AE5399931941BA8908C3E716 /* Pods_NoRegrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFD9E4B6ACD88B6BEEBCA6F /* Pods_NoRegrets.framework */; };
@@ -91,6 +92,7 @@
 		3A7748BB24034D060056A3F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3A7748C9240364220056A3F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDrinkingViewController.swift; sourceTree = "<group>"; };
+		3AAA929C24036BCE00F1C4A5 /* CalanderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanderViewController.swift; sourceTree = "<group>"; };
 		7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets.release.xcconfig"; path = "Target Support Files/Pods-NoRegrets/Pods-NoRegrets.release.xcconfig"; sourceTree = "<group>"; };
 		94FC529A1668C3F6C12DCC32 /* Pods-NoRegrets WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit App/Pods-NoRegrets WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit Extension/Pods-NoRegrets WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				3A77489B24034D030056A3F6 /* Info.plist */,
 				3A7748C9240364220056A3F6 /* LoginViewController.swift */,
 				3A7748CB240364A60056A3F6 /* StartDrinkingViewController.swift */,
+				3AAA929C24036BCE00F1C4A5 /* CalanderViewController.swift */,
 			);
 			path = NoRegrets;
 			sourceTree = "<group>";
@@ -209,7 +212,6 @@
 				A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */,
 				E2B66775F48C800B54877BD5 /* Pods-NoRegrets WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -436,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AAA929D24036BCE00F1C4A5 /* CalanderViewController.swift in Sources */,
 				3A7748CA240364220056A3F6 /* LoginViewController.swift in Sources */,
 				3A7748CC240364A60056A3F6 /* StartDrinkingViewController.swift in Sources */,
 				3A77488E24034D010056A3F6 /* AppDelegate.swift in Sources */,
