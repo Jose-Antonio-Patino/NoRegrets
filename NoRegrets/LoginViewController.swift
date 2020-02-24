@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         user.signUpInBackground { (success, error) in
             if success
             {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "logInSegue", sender: nil)
             }
             else
             {
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil
             {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "logInSegue", sender: nil)
             }
             else
             {
