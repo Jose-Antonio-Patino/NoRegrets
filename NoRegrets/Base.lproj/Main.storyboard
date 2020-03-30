@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xZu-Wb-6wI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,9 +74,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
+            <point key="canvasLocation" x="212" y="125"/>
         </scene>
-        <!--Add Drink-->
+        <!--Start Drinking View Controller-->
         <scene sceneID="jo4-2z-4NV">
             <objects>
                 <viewController id="yG9-UB-8Jc" customClass="StartDrinkingViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +86,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ujL-hH-wgS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Drink" id="ztc-WG-7Yz"/>
+                    <navigationItem key="navigationItem" id="ztc-WG-7Yz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHE-Uq-tGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +115,7 @@
         <scene sceneID="gBz-HC-6xt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fjE-Za-HYW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Add" id="LCM-br-oZg"/>
+                    <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="LCM-br-oZg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vyv-3K-S5A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -133,21 +134,115 @@
             </objects>
             <point key="canvasLocation" x="497" y="887"/>
         </scene>
-        <!--Previous Drinks-->
+        <!--Calendar View Controller-->
         <scene sceneID="tix-u1-wdn">
             <objects>
-                <viewController id="xZu-Wb-6wI" customClass="CalanderViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xZu-Wb-6wI" customClass="CalendarViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfh-HK-I06">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-La-6xO">
+                                <rect key="frame" x="0.0" y="44" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="3wx-Iu-Lc1"/>
+                                    <constraint firstAttribute="width" constant="62" id="YXl-Q4-yny"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="onLeftButton:" destination="xZu-Wb-6wI" eventType="touchUpInside" id="QUv-Uj-eXS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDC-jj-W1f">
+                                <rect key="frame" x="112" y="44" width="150" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Sap-RM-KYd"/>
+                                    <constraint firstAttribute="width" constant="150" id="e5l-sN-klJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-hq-Xb1">
+                                <rect key="frame" x="305" y="44" width="70" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="cPL-KF-nS9"/>
+                                    <constraint firstAttribute="width" constant="70" id="naR-G5-uM3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="onRightButton:" destination="xZu-Wb-6wI" eventType="touchUpInside" id="9hY-oU-4Qa"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZNa-5r-Cwn">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="ehq-ef-ebu"/>
+                                    <constraint firstAttribute="width" constant="343" id="tMl-md-ZhF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="RWO-gO-jQb">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Calendar" id="LBf-T1-kZD" customClass="DateCollectionViewCell" customModule="NoRegrets" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bpd-pp-YM4">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwh-Ve-gGU">
+                                                    <rect key="frame" x="6" y="11" width="28" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Bwh-Ve-gGU" id="Jg4-4I-qGx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xZu-Wb-6wI" id="8ng-XC-5IE"/>
+                                    <outlet property="delegate" destination="xZu-Wb-6wI" id="H7a-AL-w1n"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pNU-jF-z29" firstAttribute="trailing" secondItem="ZNa-5r-Cwn" secondAttribute="trailing" constant="16" id="2dx-pR-vGP"/>
+                            <constraint firstItem="R1k-La-6xO" firstAttribute="top" secondItem="pNU-jF-z29" secondAttribute="top" id="2o7-Z2-OiF"/>
+                            <constraint firstItem="CQS-hq-Xb1" firstAttribute="trailing" secondItem="pNU-jF-z29" secondAttribute="trailing" id="87r-y6-zEf"/>
+                            <constraint firstItem="R1k-La-6xO" firstAttribute="leading" secondItem="pNU-jF-z29" secondAttribute="leading" id="FRS-PZ-kHt"/>
+                            <constraint firstItem="ZNa-5r-Cwn" firstAttribute="top" secondItem="R1k-La-6xO" secondAttribute="bottom" constant="56" id="PxU-Gr-kJp"/>
+                            <constraint firstItem="CQS-hq-Xb1" firstAttribute="leading" secondItem="JDC-jj-W1f" secondAttribute="trailing" constant="43" id="Qmv-dY-DSj"/>
+                            <constraint firstItem="JDC-jj-W1f" firstAttribute="top" secondItem="pNU-jF-z29" secondAttribute="top" id="WMw-8e-tCC"/>
+                            <constraint firstItem="JDC-jj-W1f" firstAttribute="leading" secondItem="R1k-La-6xO" secondAttribute="trailing" constant="50" id="jRY-Wy-vmW"/>
+                            <constraint firstItem="ZNa-5r-Cwn" firstAttribute="leading" secondItem="pNU-jF-z29" secondAttribute="leading" constant="16" id="n3r-ff-mvL"/>
+                            <constraint firstItem="CQS-hq-Xb1" firstAttribute="top" secondItem="pNU-jF-z29" secondAttribute="top" id="r6n-dv-QHa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pNU-jF-z29"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Previous Drinks" id="6nE-jR-yCm"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6nE-jR-yCm"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="ZNa-5r-Cwn" id="94U-Tb-mSI"/>
+                        <outlet property="monthLabel" destination="JDC-jj-W1f" id="aDr-yt-8cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gf-tP-tg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="1630"/>
+            <point key="canvasLocation" x="1373.5999999999999" y="1629.5352323838083"/>
         </scene>
         <!--Past-->
         <scene sceneID="67x-eu-mdq">
@@ -174,6 +269,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>
