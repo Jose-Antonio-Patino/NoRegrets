@@ -2,8 +2,6 @@
 
 This application is designed to keep track of how many drinks one has taken in order to promote responsible drinking habits. 
 
-Time spent: **7** hours spent in total
-
 ## watchOS extension
 
 This application will make the tedious process of inserting how many drinks a person takes by making it simply accessible from the person’s wrist. 
