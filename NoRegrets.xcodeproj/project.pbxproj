@@ -10,6 +10,8 @@
 		3A1C2A2F244666F9008CEF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1C2A2E244666F9008CEF92 /* Assets.xcassets */; };
 		3A1C2A38244682E8008CEF92 /* StartSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C2A37244682E8008CEF92 /* StartSessionViewController.swift */; };
 		3A1C2A3B24468396008CEF92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1C2A3A24468396008CEF92 /* UIKit.framework */; };
+		3A1C2A3D2447A8A0008CEF92 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C2A3C2447A8A0008CEF92 /* SummaryTableViewController.swift */; };
+		3A1C2A402447A8DD008CEF92 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C2A3F2447A8DD008CEF92 /* SummaryCell.swift */; };
 		3A73F1D02431A058002341A9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1CF2431A058002341A9 /* CalendarViewController.swift */; };
 		3A73F1D22431A6AB002341A9 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1D12431A6AB002341A9 /* DateCollectionViewCell.swift */; };
 		3A73F1D42431A72B002341A9 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1D32431A72B002341A9 /* CalendarVars.swift */; };
@@ -78,6 +80,8 @@
 		3A1C2A2E244666F9008CEF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A1C2A37244682E8008CEF92 /* StartSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSessionViewController.swift; sourceTree = "<group>"; };
 		3A1C2A3A24468396008CEF92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A1C2A3C2447A8A0008CEF92 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		3A1C2A3F2447A8DD008CEF92 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		3A73F1CF2431A058002341A9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3A73F1D12431A6AB002341A9 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A73F1D32431A72B002341A9 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				3A73F1CF2431A058002341A9 /* CalendarViewController.swift */,
 				3A73F1D12431A6AB002341A9 /* DateCollectionViewCell.swift */,
 				3A1C2A37244682E8008CEF92 /* StartSessionViewController.swift */,
+				3A1C2A3C2447A8A0008CEF92 /* SummaryTableViewController.swift */,
+				3A1C2A3F2447A8DD008CEF92 /* SummaryCell.swift */,
 				3A77489324034D010056A3F6 /* Main.storyboard */,
 				3A77489824034D030056A3F6 /* LaunchScreen.storyboard */,
 				3A77489B24034D030056A3F6 /* Info.plist */,
@@ -448,9 +454,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1C2A3D2447A8A0008CEF92 /* SummaryTableViewController.swift in Sources */,
 				3A73F1D02431A058002341A9 /* CalendarViewController.swift in Sources */,
 				3A7748CA240364220056A3F6 /* LoginViewController.swift in Sources */,
 				3A1C2A38244682E8008CEF92 /* StartSessionViewController.swift in Sources */,
+				3A1C2A402447A8DD008CEF92 /* SummaryCell.swift in Sources */,
 				3A77488E24034D010056A3F6 /* AppDelegate.swift in Sources */,
 				3A73F1D42431A72B002341A9 /* CalendarVars.swift in Sources */,
 				3A77489024034D010056A3F6 /* SceneDelegate.swift in Sources */,

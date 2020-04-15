@@ -60,7 +60,6 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         calendarCollectionView.reloadData()
 
     }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return DaysInMonth[currentMonthIndex]
