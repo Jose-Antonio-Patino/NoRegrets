@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xZu-Wb-6wI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -76,21 +76,68 @@
             </objects>
             <point key="canvasLocation" x="212" y="125"/>
         </scene>
-        <!--Start Drinking View Controller-->
+        <!--Start Session View Controller-->
         <scene sceneID="jo4-2z-4NV">
             <objects>
-                <viewController id="yG9-UB-8Jc" customClass="StartDrinkingViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yG9-UB-8Jc" customClass="StartSessionViewController" customModule="NoRegrets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sK0-LT-mGd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ1-sc-wEp">
+                                <rect key="frame" x="16" y="318" width="343" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.60944864835886869" blue="0.47487421486856862" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sUC-X8-xjh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSessionButton:" destination="yG9-UB-8Jc" eventType="touchUpInside" id="YCn-ve-WTB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drinkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6MR-SA-fvj">
+                                <rect key="frame" x="110" y="155" width="155" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="nfU-km-uiL"/>
+                                    <constraint firstAttribute="width" constant="155" id="t5m-zb-ltt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Drink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-nS-Syo">
+                                <rect key="frame" x="16" y="44" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LPR-XM-PS1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.53074153930000001" blue="0.4460972345" alpha="0.96404599469999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ujL-hH-wgS" firstAttribute="trailing" secondItem="AQ1-sc-wEp" secondAttribute="trailing" constant="16" id="3xC-li-vEQ"/>
+                            <constraint firstItem="6MR-SA-fvj" firstAttribute="top" secondItem="dB6-nS-Syo" secondAttribute="bottom" constant="11" id="7XW-FC-d1v"/>
+                            <constraint firstItem="AQ1-sc-wEp" firstAttribute="leading" secondItem="ujL-hH-wgS" secondAttribute="leading" constant="16" id="BUT-5B-SaZ"/>
+                            <constraint firstItem="dB6-nS-Syo" firstAttribute="leading" secondItem="ujL-hH-wgS" secondAttribute="leading" constant="16" id="GSA-2U-FwT"/>
+                            <constraint firstItem="AQ1-sc-wEp" firstAttribute="top" secondItem="6MR-SA-fvj" secondAttribute="bottom" constant="8" id="Qc1-BA-LYW"/>
+                            <constraint firstItem="dB6-nS-Syo" firstAttribute="top" secondItem="ujL-hH-wgS" secondAttribute="top" id="X3t-zZ-zAK"/>
+                            <constraint firstItem="ujL-hH-wgS" firstAttribute="trailing" secondItem="dB6-nS-Syo" secondAttribute="trailing" constant="16" id="bWh-5k-QKC"/>
+                            <constraint firstItem="6MR-SA-fvj" firstAttribute="leading" secondItem="ujL-hH-wgS" secondAttribute="leading" constant="110" id="fAF-HW-L5q"/>
+                            <constraint firstItem="ujL-hH-wgS" firstAttribute="trailing" secondItem="6MR-SA-fvj" secondAttribute="trailing" constant="110" id="jVB-O6-Rdg"/>
+                            <constraint firstItem="6MR-SA-fvj" firstAttribute="top" secondItem="ujL-hH-wgS" secondAttribute="top" constant="111" id="mNb-tF-znJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ujL-hH-wgS"/>
                     </view>
                     <navigationItem key="navigationItem" id="ztc-WG-7Yz"/>
+                    <connections>
+                        <outlet property="sessionButton" destination="AQ1-sc-wEp" id="CrB-B7-cl5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHE-Uq-tGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="1630"/>
+            <point key="canvasLocation" x="496.80000000000001" y="1629.5352323838083"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pbx-Tn-Nz7">
@@ -270,6 +317,7 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="drinkIcon" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>
