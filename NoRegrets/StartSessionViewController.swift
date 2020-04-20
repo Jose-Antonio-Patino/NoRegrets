@@ -20,7 +20,6 @@ class StartSessionViewController: UIViewController
         super.viewDidLoad()
 
     }
-   
     
     @IBAction func onSessionButton(_ sender: Any)
     {
@@ -28,7 +27,7 @@ class StartSessionViewController: UIViewController
             {
                 sessionButton.backgroundColor = UIColor.white
                 sessionButton.setTitle("Stop", for: .normal)
-                sessionButton.setTitleColor(UIColor.orange, for: .normal)//(red: 246, green: 136, blue: 104, alpha: 1), for: .normal)
+                sessionButton.setTitleColor(UIColor.orange, for: .normal)
                 isSessionOn = true
             }
             else
