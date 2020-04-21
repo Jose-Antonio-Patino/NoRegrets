@@ -10,15 +10,21 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WKExtendedRuntimeSessionDelegate
+{
+ 
+    let session = WKExtendedRuntimeSession()
 
-    @IBOutlet weak var sessionButton: WKInterfaceButton!
     var isSessionOn = false
+    
+    @IBOutlet weak var sessionButton: WKInterfaceButton!
+    
+
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        session.delegate = self
     }
     
     override func willActivate() {
@@ -30,24 +36,66 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
     @IBAction func onBeginButton()
     {
         if ( !isSessionOn )
         {
+            // Sets up the button to stop
             sessionButton.setBackgroundColor(UIColor.white)
             let attString = NSMutableAttributedString(string: "Stop")
-            attString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.orange], range: NSMakeRange(0, attString.length))
+            attString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.orange],
+                                    range: NSMakeRange(0, attString.length))
             self.sessionButton.setAttributedTitle(attString)
+            
             isSessionOn = true
+            
+            // Starts the session
+            session.start()
         }
         else
         {
+            // Reverts the button back to the original look
             sessionButton.setBackgroundColor(UIColor.orange)
             let attString = NSMutableAttributedString(string: "Begin")
-            attString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], range: NSMakeRange(0, attString.length))
+            attString.setAttributes([NSAttributedString.Key.foregroundColor: UIColor.white],
+                                    range: NSMakeRange(0, attString.length))
             self.sessionButton.setAttributedTitle(attString)
             isSessionOn = false
+            
+            //Stops the session
+            session.invalidate()
         }
     }
+    
+    func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?)
+    {
+        /*
+         Handle the error if encountered
+         */
+    }
+    
+    func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession)
+    {
+        let userDefault = UserDefaults.init()
+        userDefault.addSuite(named: "com.noRegrets.noRegrets")
+        userDefault.synchronize()
+    }
+    
+    func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession)
+    {
+        /*
+         Let user know that the session is about to expire
+         */
+    }
+    
+    /*
+     share it with our app group
+     let userDefault = UserDefaults.init()
+     userDefault.addSuite(named: "com.noRegrets.noRegrets")
+     userDefault.synchronize()
+     userDefault.object(forKey: "heartRateData")
+     */
+    
     
 }

@@ -103,6 +103,8 @@
 		3A7748BA24034D060056A3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7748BB24034D060056A3F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3A7748C9240364220056A3F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A90C2BF244E35FC00001083 /* NoRegrets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoRegrets.entitlements; sourceTree = "<group>"; };
+		3A90C2C0244E3A7600001083 /* NoRegrets WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NoRegrets WatchKit App.entitlements"; sourceTree = "<group>"; };
 		7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets.release.xcconfig"; path = "Target Support Files/Pods-NoRegrets/Pods-NoRegrets.release.xcconfig"; sourceTree = "<group>"; };
 		94FC529A1668C3F6C12DCC32 /* Pods-NoRegrets WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit App/Pods-NoRegrets WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoRegrets WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-NoRegrets WatchKit Extension/Pods-NoRegrets WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		3A77488C24034D010056A3F6 /* NoRegrets */ = {
 			isa = PBXGroup;
 			children = (
+				3A90C2BF244E35FC00001083 /* NoRegrets.entitlements */,
 				3A77488D24034D010056A3F6 /* AppDelegate.swift */,
 				3A77488F24034D010056A3F6 /* SceneDelegate.swift */,
 				3A7748C9240364220056A3F6 /* LoginViewController.swift */,
@@ -198,6 +201,7 @@
 		3A7748A224034D030056A3F6 /* NoRegrets WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				3A90C2C0244E3A7600001083 /* NoRegrets WatchKit App.entitlements */,
 				3A7748A324034D030056A3F6 /* Interface.storyboard */,
 				3A7748A624034D040056A3F6 /* Assets.xcassets */,
 				3A7748A824034D040056A3F6 /* Info.plist */,
@@ -685,6 +689,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NoRegrets WatchKit App/NoRegrets WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				IBSC_MODULE = NoRegrets_WatchKit_Extension;
@@ -705,6 +710,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NoRegrets WatchKit App/NoRegrets WatchKit App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				IBSC_MODULE = NoRegrets_WatchKit_Extension;
@@ -724,6 +730,7 @@
 			baseConfigurationReference = E3F2378FF5F541C67C40D29B /* Pods-NoRegrets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NoRegrets/NoRegrets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				INFOPLIST_FILE = NoRegrets/Info.plist;
@@ -743,6 +750,7 @@
 			baseConfigurationReference = 7CC710EBDC64E876D1766431 /* Pods-NoRegrets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NoRegrets/NoRegrets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				INFOPLIST_FILE = NoRegrets/Info.plist;
