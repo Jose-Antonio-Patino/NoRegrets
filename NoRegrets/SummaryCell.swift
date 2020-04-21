@@ -10,6 +10,10 @@ import UIKit
 
 class SummaryCell: UITableViewCell {
 
+    @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var heartRateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,19 +10,16 @@ import UIKit
 
 class SummaryTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
     
@@ -35,8 +32,8 @@ class SummaryTableViewController: UITableViewController {
     {
 
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 20, y: 16, width: 320, height: 25)
-        myLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        myLabel.frame = CGRect(x: 20, y: 16, width: 320, height: 20)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 16)
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
 
         let headerView = UIView()
@@ -49,11 +46,27 @@ class SummaryTableViewController: UITableViewController {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryCell", for: indexPath) as! SummaryCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryCell") as! SummaryCell
         
+        cell.cellView.layer.cornerRadius = 8
+        cell.cellView.layer.masksToBounds = true
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        
+        let time = "Time: \(String(hour)):\(String(minutes))"
+        
+        cell.timeLabel.text = time
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
     }
 
     /*
