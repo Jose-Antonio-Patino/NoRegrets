@@ -12,6 +12,8 @@
 		3A1C2A3B24468396008CEF92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1C2A3A24468396008CEF92 /* UIKit.framework */; };
 		3A1C2A3D2447A8A0008CEF92 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C2A3C2447A8A0008CEF92 /* SummaryTableViewController.swift */; };
 		3A1C2A402447A8DD008CEF92 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C2A3F2447A8DD008CEF92 /* SummaryCell.swift */; };
+		3A2DFBFD2452589900B081EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2DFBFC2452589900B081EF /* HealthKit.framework */; };
+		3A2DFBFF245258B700B081EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2DFBFE245258B700B081EF /* HealthKit.framework */; };
 		3A73F1D02431A058002341A9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1CF2431A058002341A9 /* CalendarViewController.swift */; };
 		3A73F1D22431A6AB002341A9 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1D12431A6AB002341A9 /* DateCollectionViewCell.swift */; };
 		3A73F1D42431A72B002341A9 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F1D32431A72B002341A9 /* CalendarVars.swift */; };
@@ -82,6 +84,9 @@
 		3A1C2A3A24468396008CEF92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A1C2A3C2447A8A0008CEF92 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
 		3A1C2A3F2447A8DD008CEF92 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
+		3A2DFBFB2452589900B081EF /* NoRegrets WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NoRegrets WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		3A2DFBFC2452589900B081EF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		3A2DFBFE245258B700B081EF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3A73F1CF2431A058002341A9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3A73F1D12431A6AB002341A9 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A73F1D32431A72B002341A9 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2DFBFF245258B700B081EF /* HealthKit.framework in Frameworks */,
 				AE5399931941BA8908C3E716 /* Pods_NoRegrets.framework in Frameworks */,
 				3A1C2A3B24468396008CEF92 /* UIKit.framework in Frameworks */,
 			);
@@ -130,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FFCFBCACF7A580E1F0E541 /* Pods_NoRegrets_WatchKit_Extension.framework in Frameworks */,
+				3A2DFBFD2452589900B081EF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +154,8 @@
 		16AB44E760C0AAAC9F64F126 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A2DFBFE245258B700B081EF /* HealthKit.framework */,
+				3A2DFBFC2452589900B081EF /* HealthKit.framework */,
 				3A1C2A3A24468396008CEF92 /* UIKit.framework */,
 				CFFD9E4B6ACD88B6BEEBCA6F /* Pods_NoRegrets.framework */,
 				C33ACBC4776C9D26E8EABA51 /* Pods_NoRegrets_WatchKit_App.framework */,
@@ -212,6 +221,7 @@
 		3A7748B124034D040056A3F6 /* NoRegrets WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3A2DFBFB2452589900B081EF /* NoRegrets WatchKit Extension.entitlements */,
 				3A7748B224034D040056A3F6 /* InterfaceController.swift */,
 				3A7748B424034D040056A3F6 /* ExtensionDelegate.swift */,
 				3A7748B624034D040056A3F6 /* NotificationController.swift */,
@@ -642,6 +652,7 @@
 			baseConfigurationReference = A6271500D19756026A33C3E2 /* Pods-NoRegrets WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "NoRegrets WatchKit Extension/NoRegrets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				INFOPLIST_FILE = "NoRegrets WatchKit Extension/Info.plist";
@@ -665,6 +676,7 @@
 			baseConfigurationReference = E2B66775F48C800B54877BD5 /* Pods-NoRegrets WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "NoRegrets WatchKit Extension/NoRegrets WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8P66L5C27;
 				INFOPLIST_FILE = "NoRegrets WatchKit Extension/Info.plist";

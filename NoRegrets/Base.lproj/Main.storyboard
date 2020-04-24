@@ -105,7 +105,7 @@
                                     <constraint firstAttribute="width" constant="155" id="t5m-zb-ltt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Drink" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-nS-Syo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-nS-Syo">
                                 <rect key="frame" x="16" y="44" width="343" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="LPR-XM-PS1"/>
@@ -142,7 +142,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Pbx-Tn-Nz7">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="KWa-9C-HU4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="KWa-9C-HU4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rcL-So-saO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -402,7 +402,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9p-Hw-Cmj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373.5999999999999" y="2362.6686656671668"/>
+            <point key="canvasLocation" x="2129" y="1630"/>
         </scene>
         <!--Past-->
         <scene sceneID="67x-eu-mdq">

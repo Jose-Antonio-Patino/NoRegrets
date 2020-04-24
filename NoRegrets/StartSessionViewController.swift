@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import HealthKit
+
+let healthStore:HKHealthStore = HKHealthStore()
+
 
 class StartSessionViewController: UIViewController
 {
 
     var isSessionOn = false
-    
+        
     @IBOutlet weak var sessionButton: UIButton!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
 
     }
     
@@ -36,6 +41,17 @@ class StartSessionViewController: UIViewController
             sessionButton.setTitle("Begin", for: .normal)
             sessionButton.setTitleColor(UIColor.white, for: .normal)
             isSessionOn = false
+        }
+    }
+    
+    func authorizeHealthKitInApp()
+    {
+        let allTypes = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+
+        healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+            if !success {
+                print(error as Any)
+            }
         }
     }
     

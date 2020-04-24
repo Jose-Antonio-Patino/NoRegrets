@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class SummaryTableViewController: UITableViewController {
 
