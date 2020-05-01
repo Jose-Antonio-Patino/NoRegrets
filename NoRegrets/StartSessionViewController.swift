@@ -34,6 +34,7 @@ class StartSessionViewController: UIViewController
             sessionButton.setTitle("Stop", for: .normal)
             sessionButton.setTitleColor(UIColor.orange, for: .normal)
             isSessionOn = true
+            self.authorizeHealthKitInApp()
         }
         else
         {
@@ -48,12 +49,30 @@ class StartSessionViewController: UIViewController
     {
         let allTypes = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
 
-        healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+        let heartRateToWrite: Set<HKSampleType> = []
+
+        if !HKHealthStore.isHealthDataAvailable()
+        {
+            print("Error occured")
+            return
+        }
+
+        healthStore.requestAuthorization(toShare: heartRateToWrite, read: allTypes) { (success, error) in
             if !success {
                 print(error as Any)
             }
         }
     }
+//
+//    func readProfile() -> (heartReate:Int?)
+//    {
+//        var heartRate: Int?
+//
+//        do
+//        {
+//            let
+//        }
+//    }
     
     /*
      Grab data: Heart rate

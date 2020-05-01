@@ -62,8 +62,30 @@ class SummaryTableViewController: UITableViewController {
         let time = "Time: \(String(hour)):\(String(minutes))"
         
         cell.timeLabel.text = time
-
+        
+        
+        cell.heartRateLabel.text = "74"
+        
+        
+         
         return cell
+    }
+    
+    static func saveMockHeartData() {
+
+      // 1. Create a heart rate BPM Sample
+        let heartRateType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+        let heartRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"),
+        doubleValue: Double(arc4random_uniform(80) + 100))
+      let heartSample = HKQuantitySample(type: heartRateType,
+                                         quantity: heartRateQuantity, start: NSDate() as Date, end: NSDate() as Date)
+
+      // 2. Save the sample in the store
+        healthStore.save(heartSample, withCompletion: { (success, error) -> Void in
+        if let error = error {
+          print("Error saving heart sample: \(error.localizedDescription)")
+        }
+      })
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
